@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./页面2.css">
+</head>
+<body>
+    <img id="shushu-front" src="./鼠鼠正面.png" alt="鼠鼠正面图">
+    <img id="shushu-side" src="./鼠鼠侧面_rotated.png" alt="鼠鼠侧面图">
+
+    <div class="table">
+        <div class="table-top"></div>
+    </div>
+    <div class="closet-big-left1-1"></div>
+    <div class="closet-big-left1-2"></div>
+    <div class="closet-big-left1-3"></div>
+    
+    <div class="closet-big-left2-1"></div>
+    <div class="closet-big-left2-2"></div>
+    <div class="closet-big-left2-3"></div>
+
+    <div class="closet-big-right1-1"></div>
+    <div class="closet-big-right1-2"></div>
+    <div class="closet-big-right1-3"></div>
+
+    <div class="closet-big-right2-1"></div>
+    <div class="closet-big-right2-2"></div>
+    <div class="closet-big-right2-3"></div>
+
+    <div class="xishoutai"></div>
+    <div class="shuilongtou1"></div>
+    <div class="shuilongtou2">
+        <div class="qihandle1"></div>
+        <div class="qihandle2"></div>
+        <div class="qihandle3"></div>
+    </div>
+    
+
+    <div class="wallpaper"></div>
+
+    <div class="L-glass-closet-left1"></div>
+    <div class="L-glass-closet-left2"></div>
+    <div class="L-glass-closet-left3"></div>
+    <div class="L-glass-closet-right1"></div>
+    <div class="L-glass-closet-right2"></div>
+    <div class="L-glass-closet-right3"></div>
+
+    <div class="R-glass-closet-left1"></div>
+    <div class="R-glass-closet-left2"></div>
+    <div class="R-glass-closet-left3"></div>
+    <div class="R-glass-closet-right1"></div>
+    <div class="R-glass-closet-right2"></div>
+    <div class="R-glass-closet-right3"></div>
+    <!-- 隔板 -->
+    <div class="left-geban">
+        <div class="L-geban1"></div>
+        <div class="L-geban2"></div>
+        <div class="L-geban3"></div>
+        <div class="L-geban4"></div>
+    </div>
+    <div class="right-geban">
+        <div class="R-geban1"></div>
+        <div class="R-geban2"></div>
+        <div class="R-geban3"></div>
+        <div class="R-geban4"></div>
+    
+    <div class="shelf1"></div>
+    <div class="shelf2"></div>
+
+    
+    <div class="cup-body"></div>
+    <div class="cup-handle"></div>
+
+    <div class="bowl-body"></div>
+    <div class="bowl-bottom"></div>
+    
+    <div class="bowl-1-1"></div>
+    <div class="bowl-1-2"></div>
+    <div class="bowl-1-3"></div>
+    <div class="bowl-2-1"></div>
+    <div class="bowl-2-2"></div>
+    <div class="bowl-2-3"></div>
+    
+    <div class="bottle-top"></div>
+    <div class="bottle-neck"></div>
+    <div class="bottle-body"></div>
+
+    <!-- 下面是高脚杯的样式 -->
+    <div class="goblet-body"></div>
+    <div class="goblet-stem"></div>
+    <div class="goblet-foot"></div>
+    <script>
+        var hamsterFront = document.getElementById('shushu-front');
+        var hamsterSide = document.getElementById('shushu-side');
+
+        document.addEventListener('keydown', function(e) {
+            hamsterFront.style.width = '120px';
+            var speed = 15; // 设置移动速度
+            var left = hamsterFront.offsetLeft; // 获取hamster当前的左边距
+
+            var currentHamster = hamsterFront.style.display === 'block' ? hamsterFront : hamsterSide;
+            
+
+            if (e.key === 'ArrowLeft') { // 如果按下的是左箭头键
+                var left = currentHamster.offsetLeft; // 获取当前显示的hamster的左边距
+                hamsterFront.style.display = 'none'; // 隐藏正面的hamster
+                hamsterSide.style.display = 'block'; // 显示侧面的hamster
+                hamsterSide.style.transform = 'scaleX(1)'; // 应用水平翻转
+                currentHamster.style.left = (left - speed) + 'px'; // hamster向左移动
+                // 如果鼠鼠的左边缘小于或等于其负宽度
+                if (parseInt(currentHamster.style.left) <= -currentHamster.offsetWidth) {
+                    window.location.href = '页面1.html'; // 重定向到页面1
+                }
+                
+            } else if (e.key === 'ArrowRight') { // 如果按下的是右箭头键
+                var left = currentHamster.offsetLeft; // 获取当前显示的hamster的左边距
+                hamsterFront.style.display = 'none'; // 隐藏正面的hamster
+                hamsterSide.style.display = 'block'; // 显示侧面的hamster
+                hamsterSide.style.transform = 'scaleX(-1)'; // 移除水平翻转
+                currentHamster.style.left = (left + speed) + 'px'; // hamster向右移动
+
+                
+            }
+            
+        });
+
+        document.addEventListener('keyup', function(e) {// 当释放键盘时
+
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { // 如果释放的是左箭头键或右箭头键
+                hamsterFront.style.left = hamsterSide.style.left; // 将正面的hamster的位置设置为侧面的hamster的位置
+                hamsterFront.style.display = 'block'; // 显示正面的hamster
+                hamsterSide.style.display = 'none'; // 隐藏侧面的hamster
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {// 当按下键盘时
+            var shuilongtou1 = document.querySelector('.shuilongtou1');
+            var shuilongtou1Left = shuilongtou1.offsetLeft-20;// 将判定标准向左移动20px
+
+            var currentHamster = hamsterFront.style.display === 'block' ? hamsterFront : hamsterSide;
+            var hamsterLeft = currentHamster.offsetLeft;
+
+            if (hamsterLeft >= shuilongtou1Left) {
+                window.location.href = '页面3-水池.html'; // 跳转到页面3-水池.html
+            }
+        });
+        
+
+        
+    </script>
+</body>
+</html>

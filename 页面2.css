@@ -1,0 +1,637 @@
+/* 以下是鼠鼠的样式 */
+#shushu-front, #shushu-side {
+    position: absolute;
+    bottom: 25%;
+    width: 100px;
+    transition: transform 0.5s;
+    z-index: 9;
+}
+
+
+.table{
+    position: fixed;
+    bottom: 0%;/* bottom属性用于定义一个绝对定位元素的底边缘与其包含块的底边缘之
+    间的距离。如果元素的位置是固定的（position: fixed;），那么它的包含块就是视口 */
+    left: 0;
+    width: 100%;
+    height: 23.4%;
+    background-color: burlywood;
+    border-top: 3px solid black;
+    
+}
+.table-top{
+    position: fixed;
+    bottom: 23.4%;
+    left: 0;
+    width: 100%;
+    height: 2%;
+    background-color: rgb(128, 53, 53);
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.closet-big-left1-1{
+    position: fixed;
+    bottom: 0px;
+    left: 2%;
+    width: 18%;
+    height: 19.4%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+    
+}
+.closet-big-left1-2{
+    position: fixed;
+    bottom: 0px;
+    left: 3%;
+    width: 15.7%;
+    height: 17.6%;
+    background-color: rgb(1,1,1);
+    border-top: 3px solid rgb(233,186,144);
+    border-left: 3px solid rgb(233,186,144);
+    border-right: 3px solid rgb(233,186,144);
+    display: flex;
+}
+.closet-big-left1-3{
+    position: fixed;
+    bottom: 0px;
+    left: 4.1%;
+    width: 13.4%;
+    height: 15%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+}
+.closet-big-left2-1{
+    position: fixed;
+    bottom: 0px;
+    left: 20%;
+    width: 18%;
+    height: 19.4%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+    
+} 
+.closet-big-left2-2{
+    position: fixed;
+    bottom: 0px;
+    left: 21%;
+    width: 15.7%;
+    height: 17.6%;
+    background-color: rgb(1,1,1);
+    border-top: 3px solid rgb(233,186,144);
+    border-left: 3px solid rgb(233,186,144);
+    border-right: 3px solid rgb(233,186,144);
+    display: flex;
+}
+.closet-big-left2-3{
+    position: fixed;
+    bottom: 0px;
+    left: 22.1%;
+    width: 13.4%;
+    height: 15%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+}
+.closet-big-right1-1{
+    position: fixed;
+    bottom: 0px;
+    left: 69%;
+    width: 18%;
+    height: 19.4%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+    
+}
+.closet-big-right1-2{
+    position: fixed;
+    bottom: 0px;
+    left: 70%;
+    width: 15.7%;
+    height: 17.6%;
+    background-color: rgb(1,1,1);
+    border-top: 3px solid rgb(233,186,144);
+    border-left: 3px solid rgb(233,186,144);
+    border-right: 3px solid rgb(233,186,144);
+    display: flex;
+}
+.closet-big-right1-3{
+    position: fixed;
+    bottom: 0px;
+    left: 71.1%;
+    width: 13.4%;
+    height: 15%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+}
+.closet-big-right2-1{
+    position: fixed;
+    bottom: 0px;
+    left: 87%;
+    width: 18%;
+    height: 19.4%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+    
+}
+.closet-big-right2-2{
+    position: fixed;
+    bottom: 0px;
+    left: 88%;
+    width: 15.7%;
+    height: 17.6%;
+    background-color: rgb(1,1,1);
+    border-top: 3px solid rgb(233,186,144);
+    border-left: 3px solid rgb(233,186,144);
+    border-right: 3px solid rgb(233,186,144);
+    display: flex;
+}
+.closet-big-right2-3{
+    position: fixed;
+    bottom: 0px;
+    left: 89.1%;
+    width: 13.4%;
+    height: 15%;
+    background-color: rgb(126, 50, 50);
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: flex;
+}
+
+.xishoutai{
+    position: fixed;
+    bottom: 25%;
+    left: 41%;
+    width: 24%;
+    height: 1%;
+    background-color: rgb(202, 199, 199);
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+}
+.shuilongtou1{
+    position: fixed;
+    bottom: 26.2%;
+    left: 51%;
+    width: 3%;
+    height: 2%;
+    background-color: rgb(202, 199, 199);
+}
+.shuilongtou2{
+    position: fixed;
+    bottom: 26.2%;
+    left: 51%;
+    width: 3%;
+    height: 2%;
+    background-color: rgb(202, 199, 199);
+    border-radius: 50%; /* 创建圆形的水龙头 */
+}
+
+.qihandle1 {
+    position: fixed;
+    bottom: 28%;
+    left: 52%;
+    width: 1%;
+    height: 11%;
+    background-color: rgb(202, 199, 199);
+    border-bottom: 2px solid black;
+}
+.qihandle2 {
+    position: fixed;
+    bottom: 39%;
+    left: 50%;
+    width: 3%;
+    height: 1.5%;
+    background-color: rgb(202, 199, 199);
+    
+}
+.qihandle3{
+    position: fixed;
+    top: 61%;
+    left: 50%;
+    width: 1%;
+    height: 3%;
+    background-color: rgb(202, 199, 199);
+    border-bottom: 3px solid black;
+}
+
+/* 以下是壁纸的样式 */
+.wallpaper{
+    position: fixed;
+    bottom: 25%;
+    left: 0px;
+    width: 100%;
+    height: 75%; 
+    background-color: rgb(246, 237, 213);
+    display: flex;
+    z-index: -1;
+   
+    /* 壁纸的井字花纹 */
+    background-image: 
+        linear-gradient(0deg, transparent 24px, #6c6a6a 25px, #6c6a6a 26px, transparent 27px),
+        linear-gradient(90deg, transparent 24px, #6c6a6a 25px, #6c6a6a 26px, transparent 27px);
+    background-size: 100px 100px;
+    
+}
+
+/* 左边玻璃橱柜的样式 */
+.L-glass-closet-left1{
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 12%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.L-glass-closet-left2{
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    width: 10%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.L-glass-closet-left3{
+    position: fixed;
+    top: 4%;
+    left: 2%;
+    width: 8%;
+    height: 26%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+}
+
+
+/* 右边玻璃橱柜的样式 */
+.L-glass-closet-right1{
+
+    position: fixed;
+    top: 0;
+    left: 12%;
+    width: 12%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.L-glass-closet-right2{
+    position: fixed;
+    top: 2%;
+    left: 13%;
+    width: 10%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.L-glass-closet-right3{
+    position: fixed;
+    top: 4%;
+    left: 14%;
+    width: 8%;
+    height: 26%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+}
+
+/* 以下是玻璃橱柜的隔板的样式 */
+.L-geban1{
+    position: fixed;
+    top: 12%;
+    left: 2.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.L-geban2{
+    position: fixed;
+    top: 22%;
+    left: 2.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.L-geban3{
+    position: fixed;
+    top: 12%;
+    left: 14.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.L-geban4{
+    position: fixed;
+    top: 22%;
+    left: 14.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 以下是架子的样式  */
+.shelf1{
+    position: fixed;
+    top: 32%;
+    left: 24.2%;
+    width: 50.5%;
+    height: 1%;
+    background-color: rgb(164, 162, 162);
+    border: 3px solid black;
+    display: flex;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.shelf2{
+    position: fixed;
+    top: 16%;
+    left: 24.2%;
+    width: 50.5%;
+    height: 1%;
+    background-color: rgb(164, 162, 162);
+    border: 3px solid black;
+    display: flex;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 以下是右边玻璃橱柜的样式 */
+.R-glass-closet-left1{
+    position: fixed;
+    top: 0;
+    left: 75%;
+    width: 12%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.R-glass-closet-left2{
+    position: fixed;
+    top: 2%;
+    left: 76%;
+    width: 10%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.R-glass-closet-left3{
+    position: fixed;
+    top: 4%;
+    left: 77%;
+    width: 8%;
+    height: 26%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+}
+.R-glass-closet-right1{
+    position: fixed;
+    top: 0;
+    left: 87%;
+    width: 12%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.R-glass-closet-right2{
+    position: fixed;
+    top: 2%;
+    left: 88%;
+    width: 10%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.R-glass-closet-right3{
+    position: fixed;
+    top: 4%;
+    left: 89%;
+    width: 8%;
+    height: 26%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+}
+
+
+/* 以下是右边玻璃橱柜的隔板的样式  */
+.R-geban1{
+    position: fixed;
+    top: 12%;
+    left: 77.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.R-geban2{
+    position: fixed;
+    top: 22%;
+    left: 77.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.R-geban3{
+    position: fixed;
+    top: 12%;
+    left: 89.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.R-geban4{
+    position: fixed;
+    top: 22%;
+    left: 89.1%;
+    width: 8.1%;
+    height: 0.5%;
+    background-color: rgb(128, 53, 53);
+    /* border: 2px solid black; */
+    display: flex;
+    opacity: 0.5; /* 50% 透明度 */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 杯身 */
+.cup-body {
+    position: fixed;
+    width: 2%;
+    height: 4%;
+    background-color: #d4c675;
+    left: 4%;
+    top: 8%;
+}
+
+/* 杯柄 */
+.cup-handle {
+    position: fixed;
+    width: 0.5%;
+    height: 2%;
+    background-color: #57512a;
+    left: 6%;
+    top: 9.5%
+}
+
+
+
+
+.bowl-1-1 {
+    position: fixed;
+    border-top: 15px solid rgb(255, 254, 254);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    left: 15%;
+    top: 10%;
+    height: 2%;
+    width: 2%;
+}
+.bowl-1-2 {
+    position: fixed;
+    border-top: 15px solid rgb(255, 254, 254);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    left: 15%;
+    top: 9%;
+    height: 2%;
+    width: 2%;
+    
+}
+.bowl-1-3 {
+    position: fixed;
+    border-top: 15px solid rgb(255, 254, 254);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    left: 15%;
+    top: 8%;
+    height: 2%;
+    width: 2%;
+    
+}
+.bowl-2-1{
+    position: fixed;
+    border-top: 15px solid rgb(255, 254, 254);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    left: 15%;
+    top: 20%;
+    height: 2%;
+    width: 2%;
+}
+.bowl-2-2{
+    position: fixed;
+    border-top: 15px solid rgb(255, 254, 254);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    left: 15%;
+    top: 19%;
+    height: 2%;
+    width: 2%;
+}
+.bowl-2-3{
+    position: fixed;
+    border-top: 15px solid rgb(255, 254, 254);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    left: 15%;
+    top: 18%;
+    height: 2%;
+    width: 2%;
+}
+
+/* 瓶身 */
+.bottle-body {
+    width: 2%;
+    height: 8%;
+    background-color: #1f8a04;
+    border-radius: 4px;
+    position: fixed;
+    top: 24%;
+    right: 34%;
+}
+
+/* 瓶颈 */
+.bottle-neck {
+    width: 1%;
+    height: 3%;
+    background-color: #1f8a04;
+    border-radius: 1px;
+    position: fixed;
+    top: 21%;
+    right:34.5%;
+}
+
+/* 瓶口 */
+.bottle-top {
+    width: 1%;
+    height: 1%;
+    background-color: #5b2c1d;
+    border-radius: 0px;
+    position: fixed;
+    top: 20%;
+    right:34.5%;
+}
+
+
+

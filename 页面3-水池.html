@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水池</title>
+    <style> 
+        @keyframes water{  
+            0%{  
+                transform: translateY(0);  
+            }  
+            50%{  
+                transform: translateY(-20px);  
+            }  
+            100%{  
+                transform: translateY(0);  
+            }  
+        } 
+        body{  
+            background: burlywood;  
+            overflow: hidden;  
+            
+        }
+        .water{  
+            width: 95%;  
+            height: 95%;  
+            background: #00BFFF;  
+            position: absolute;  
+            top: 3.5%;  
+            left: 2.5%;;  
+            z-index: 1;  
+            animation: water 2s linear infinite;  
+            /* background-image: url(./R-C.jpg);  */
+        } 
+        .drain{  
+            width: 100px;  
+            height: 100px;  
+            background: #464545;   
+            border-radius: 50%;  
+            position: absolute;  
+            top: 50%;  
+            left: 50%;  
+            margin: -50px 0 0 -50px;  
+            z-index: 2;  
+            /* background-image: url(./排水口.png); */
+            
+        }
+        #shushu {
+            position: absolute;
+            bottom: 25%;
+            width: 90px;
+            transition: transform 0.5s;
+            z-index: 9;
+        }
+        /* 在CSS中为"hitbox"设置样式 */
+        #hitbox {
+            position: absolute;
+            border: 3px solid red;
+            background: transparent;
+            z-index: 10;
+        }
+        .bullet {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgb(251, 59, 34);
+            border-radius: 50%;
+        }
+        /* 在CSS中为"bulletHitbox"设置样式 */
+#bulletHitbox {
+    position: absolute;
+    border: 2px solid orange;
+    background: transparent;
+}
+    </style>
+</head>
+<body>
+    <img id="shushu" src="./鼠鼠侧面_rotated.png" >
+    <div class="sink">  
+        <div class="drain"></div>  
+        <div class="water"></div>  
+    </div> 
+    <div class="bullet"></div>
+    
+        
+    </div>
+    <!-- 在HTML中添加新的div元素 -->
+    <div id="hitbox"></div>
+    <!-- 在HTML中添加新的div元素 -->
+    <div id="bulletHitbox"></div>
+    <script>
+        var shushu = document.getElementById('shushu');
+        var speed = 20; // 控制移动速度
+        var hitCount = 0; // 记录shushu被击中的次数
+
+        document.addEventListener('keydown', function(e) {
+            var top = parseInt(window.getComputedStyle(shushu).getPropertyValue('top'));
+            var left = parseInt(window.getComputedStyle(shushu).getPropertyValue('left'));
+
+            switch(e.key) {
+                case 'ArrowUp':
+                    shushu.style.top = (top - speed) + 'px';
+                    break;
+                case 'ArrowDown':
+                    shushu.style.top = (top + speed) + 'px';
+                break;
+                case 'ArrowLeft':
+                    shushu.style.left = (left - speed) + 'px';
+                    shushu.style.transform = 'scaleX(1)';
+                    break;
+                case 'ArrowRight':
+                    shushu.style.left = (left + speed) + 'px';
+                    shushu.style.transform = 'scaleX(-1)';
+                    break;
+            }
+            updateHitbox()
+        });
+
+
+        // 创建子弹并添加到 "water" div 中
+        function createBullets(numBullets) {
+            var water = document.querySelector('.water');
+            var waterRect = water.getBoundingClientRect(); // 获取 "water" div 的位置和大小
+            var centerX = waterRect.width / 2; // 计算 "water" div 的中心的 x 坐标
+            var centerY = waterRect.height / 2; // 计算 "water" div 的中心的 y 坐标
+            for (var i = 0; i < numBullets; i++) {
+                var bullet = document.createElement('div');
+                bullet.className = 'bullet';
+                bullet.style.left = centerX + 'px'; // 设置子弹的初始 x 坐标
+                bullet.style.top = centerY + 'px'; // 设置子弹的初始 y 坐标
+                water.appendChild(bullet);
+            }
+        }
+
+        // 检查一个子弹是否击中了鼠鼠
+        function checkHit(bullet) {
+            var shushu = document.querySelector('#shushu');
+            var shushuRect = shushu.getBoundingClientRect();
+            var bulletRect = bullet.getBoundingClientRect();
+            return !(bulletRect.right < shushuRect.left || 
+                    bulletRect.left > shushuRect.right || 
+                    bulletRect.bottom < shushuRect.top || 
+                    bulletRect.top > shushuRect.bottom);
+        }
+
+        // 在JavaScript中，每次鼠鼠移动时，更新"hitbox"的位置和大小
+        function updateHitbox() {
+            var shushu = document.querySelector('#shushu');
+            var shushuRect = shushu.getBoundingClientRect();
+            var hitbox = document.querySelector('#hitbox');
+            hitbox.style.left = shushuRect.left + 'px';
+            hitbox.style.top = shushuRect.top + 'px';
+            hitbox.style.width = shushuRect.width + 'px';
+            hitbox.style.height = shushuRect.height + 'px';
+        }
+        // 检查鼠鼠是否到达了 "water" div 的右边缘
+        function checkReachRight() {
+            var shushu = document.querySelector('#shushu');
+            var shushuRect = shushu.getBoundingClientRect();
+            var water = document.querySelector('.water');
+            var waterRect = water.getBoundingClientRect();
+
+            if (shushuRect.right >= waterRect.right) {
+                // 将鼠鼠的位置存储在 sessionStorage 中
+                sessionStorage.setItem('shushuTop', shushuRect.top);
+                sessionStorage.setItem('shushuLeft', shushuRect.left);
+                // 跳转到页面2副本
+                window.location.href = '觅食成功.html';
+            }
+        }
+        // 在JavaScript中，每次子弹移动时，更新"bulletHitbox"的位置和大小
+        function updateBulletHitbox() {
+            var bullet = document.querySelector('.bullet');
+            var bulletRect = bullet.getBoundingClientRect();
+            var bulletHitbox = document.querySelector('#bulletHitbox');
+            bulletHitbox.style.left = bulletRect.left + 'px';
+            bulletHitbox.style.top = bulletRect.top + 'px';
+            bulletHitbox.style.width = bulletRect.width + 'px';
+            bulletHitbox.style.height = bulletRect.height + 'px';
+        }
+
+        // 随机移动子弹
+        function moveBullets() {
+            var bullets = document.querySelectorAll('.bullet');
+
+            bullets.forEach(function(bullet) {
+                var direction = Math.random() * 2 * Math.PI; // 子弹的移动方向，单位是弧度
+                var speed = Math.random() * 10; // 子弹的移动速度
+
+                var intervalId = setInterval(function() {
+                    var bulletTop = parseInt(window.getComputedStyle(bullet).getPropertyValue('top'));
+                    var bulletLeft = parseInt(window.getComputedStyle(bullet).getPropertyValue('left'));
+
+                    // 移动子弹
+                    bullet.style.top = (bulletTop + speed * Math.sin(direction)) + 'px';
+                    bullet.style.left = (bulletLeft + speed * Math.cos(direction)) + 'px';
+                    // 更新子弹的判定范围
+                    updateBulletHitbox();
+                }, 100);
+
+                // 检查子弹是否击中了鼠鼠
+                if (checkHit(bullet)) {
+                    hitCount++;
+                    if (hitCount >= 5) {
+                    // 跳转到 Game Over 页面
+                    window.location.href = './gameover.html';
+                    }
+                }
+
+                // 检查鼠鼠是否到达了 "water" div 的右边缘
+                checkReachRight();
+            });
+        }
+
+        window.onload = function() {
+                createBullets(100); // 创建 100 个子弹
+                moveBullets(); // 移动子弹
+
+                setInterval(function() {
+                    createBullets(90); // 创建 100 个子弹
+                    moveBullets(); // 移动子弹
+                }, 5000); // 每 5 秒执行一次
+        }
+
+    </script>
+</body>
+</html>

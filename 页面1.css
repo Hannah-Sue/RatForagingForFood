@@ -1,0 +1,418 @@
+.table{
+    position: fixed;
+    bottom: 0%;/* bottom属性用于定义一个绝对定位元素的底边缘与其包含块的底边缘之
+    间的距离。如果元素的位置是固定的（position: fixed;），那么它的包含块就是视口 */
+    left: 0;
+    width: 100%;
+    height: 23.4%;
+    background-color: burlywood;
+    border-top: 3px solid black;
+    
+}
+.table-top{
+    position: fixed;
+    bottom: 23.4%;
+    left: 0;
+    width: 100%;
+    height: 2%;
+    background-color: rgb(128, 53, 53);
+    border-top: 3px solid black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.closet-left-1{
+    position: fixed;
+    bottom: 0px;
+    left: 2%;
+    width: 23%;
+    height: 21.4%;
+    background-color: rgb(128, 53, 53);
+    border: 3px solid black;
+    display: flex;
+    
+}
+.closet-left-2{
+    position: fixed;
+    bottom: 0px;
+    left: 3%;
+    width: 21%;
+    height: 20%;
+    background-color: rgb(1, 1, 1);
+    border: 2px solid black;
+    display: flex;
+}
+.closet-left-3{
+    position: fixed;
+    bottom: 0px;
+    left: 4%;
+    width: 19%;
+    height: 18%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.closet-left-4{
+    position: fixed;
+    bottom: 0px;
+    left: 5%;
+    width: 17%;
+    height: 16%;
+    background-color: rgb(1, 1, 1);
+    border: 2px solid black;
+    display: flex;
+}
+.closet-left-5{
+    position:fixed ;
+    bottom: 0px;
+    left: 6%;
+    width: 15%;
+    height: 14%;
+    background-color: rgb(128, 53, 53);
+    /* background: linear-gradient(to right, red, orange); */
+    border: 2px solid black;
+    display: flex;
+}
+.handle {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 80%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+.closet-right-1{
+    position: fixed;
+    bottom: 0px;
+    right: 2%;
+    width: 23%;
+    height: 21.4%;
+    background-color: rgb(128, 53, 53);
+    border: 3px solid black;
+    display: flex;
+}
+.closet-right-2{
+    position: fixed;
+    bottom: 0px;
+    right: 3%;
+    width: 21%;
+    height: 20%;
+    background-color: rgb(1, 1, 1);
+    border: 2px solid black;
+    display: flex;
+}
+.closet-right-3{
+    position: fixed;
+    bottom: 0px;
+    right: 4%;
+    width: 19%;
+    height: 18%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.closet-right-4{
+    position: fixed;
+    bottom: 0px;
+    right: 5%;
+    width: 17%;
+    height: 16%;
+    background-color: rgb(1, 1, 1);
+    border: 2px solid black;
+    display: flex;
+}
+.closet-right-5{
+    position: fixed;
+    bottom: 0px;
+    right: 6%;
+    width: 15%;
+    height: 14%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+
+/* 以下是上面的柜子的样式 */
+.closet-top-left1
+{
+    position: fixed;
+    top: 0;
+    left: 23%;
+    width: 10%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.closet-top-left2{
+    position: fixed;
+    top: 2%;
+    left: 24%;
+    width: 8%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.handle-right {
+    width: 1%;
+    height: 15%;
+    background-color: rgb(7, 7, 7);
+    position: fixed;
+    left: 30%;
+    top: 10%;
+}
+.closet-top-right1{
+    position: fixed;
+    top: 0;
+    right: 23%;
+    width: 10%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.closet-top-right2{
+    position: fixed;
+    top: 2%;
+    right: 24%;
+    width: 8%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.handle-left1 {
+    width: 1%;
+    height: 15%;
+    background-color: rgb(7, 7, 7);
+    position: fixed;
+    left: 69%;
+    top: 10%;
+}
+.closet-top-right3{
+    position: fixed;
+    top: 0px;
+    right: 13%;
+    width: 10%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.closet-top-right4{
+    position: fixed;
+    top: 2%;
+    right: 14%;
+    width: 8%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.handle-left2 {
+    width: 1%;
+    height: 15%;
+    background-color: rgb(7, 7, 7);
+    position: fixed;
+    left: 79%;
+    top: 10%;
+}
+.closet-top-right5{
+    position: fixed;
+    top: 0px;
+    right: 3%;
+    width: 10%;
+    height: 34%;
+    background-color: burlywood;
+    border: 3px solid black;
+    display: flex;
+}
+.closet-top-right6{
+    position: fixed;
+    top: 2%;
+    right: 4%;
+    width: 8%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+.handle-left3 {
+    width: 1%;
+    height: 15%;
+    background-color: rgb(7, 7, 7);
+    position: fixed;
+    left: 89%;
+    top: 10%;
+}
+.closet-top-right7{
+    position: fixed;
+    top: 0px;
+    left: 97%;
+    width: 3%;
+    height: 34.2%;
+    background-color: burlywood;
+    border-bottom: 3px solid black;
+    border-top: 2px solid black;
+    border-left: 1px solid black;
+    display: flex;
+}
+.closet-top-right8{
+    position: fixed;
+    top: 2%;
+    left: 98%;
+    width: 2%;
+    height: 30%;
+    background-color: rgb(128, 53, 53);
+    border: 2px solid black;
+    display: flex;
+}
+
+/* 以下是架子的样式 */
+.shelf1{
+    position: fixed;
+    top: 32%;
+    left: 0%;
+    width: 22.8%;
+    height: 1%;
+    background-color: rgb(164, 162, 162);
+    border: 3px solid black;
+    display: flex;
+}
+.shelf2{
+    position: fixed;
+    top: 16%;
+    left: 0%;
+    width: 22.8%;
+    height: 1%;
+    background-color: rgb(164, 162, 162);
+    border: 3px solid black;
+    display: flex;
+}
+/* 以下是抽油烟机的样式 */
+.rangeHood1-1{
+    position: fixed;
+    top: 0%;
+    left: 46%;
+    width: 4%;
+    height: 26%;
+    background-color: rgb(164, 162, 162);
+    border-left: 3px solid black;
+    display: flex;
+}
+.rangeHood1-2{
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    width: 4%;
+    height: 26%;
+    background-color: rgb(200,200,200);
+    border-right: 3px solid black;
+    display: flex;
+}
+.rangeHood2{
+    position: fixed;
+    top: 26%;
+    left: 33.2%;
+    width: 33.2%;
+    height: 6%;
+    background-color: rgb(26, 25, 25);
+    border: 3px solid black;
+    display: flex;
+}
+.rangeHood3{
+    position: fixed;
+    top: 32%;
+    left: 33.2%;
+    width: 33.2%;
+    height: 2%;
+    background-color: rgb(164, 162, 162);
+    border: 3px solid black;
+    display: flex;
+}
+/* 以下是灶台的样式 */
+.zaotai{
+    bottom: 25.5%;
+    left: 30%;
+    width: 40%;
+    height: 2%;
+    background-color: rgb(4, 4, 4);
+    border-radius: 50%;
+    z-index: 1;
+}
+/* 以下是烤炉的样式 */
+.stove-biankuang{
+    position: fixed;
+    bottom: 0px;
+    left: 30%;
+    width: 40%;
+    height: 22.8%;
+    /* background-color: rgb(24, 40, 36); */
+    background-color: rgb(164, 162, 162);
+    border: 3px solid black;
+    display: flex;
+}
+.stove-center{
+    position: fixed;
+    bottom: 0px;
+    left: 31%;
+    width: 38%;
+    height: 15%;
+    background-color: rgb(24, 40, 36);
+    border: 2px solid black;
+    display: flex;
+}
+.stove-top{
+    position: fixed;
+    bottom: 18.5%;
+    left: 31%;
+    width: 38%;
+    height: 3%;
+    background-color: rgb(24, 40, 36);
+    display: flex;
+}
+.stove-buttom1{
+    position: fixed;
+    bottom: 0px;
+    left: 31%;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(187, 228, 218);
+    border: 2px solid black; 
+    border-radius: 50%;
+    display: flex;
+}
+
+/* 以下是壁纸的样式 */
+.wallpaper{
+    position: fixed;
+    bottom: 25%;
+    left: 0px;
+    width: 100%;
+    height: 75%; 
+    background-color: rgb(246, 237, 213);
+    display: flex;
+    z-index: -1;
+   
+    background-image: 
+        linear-gradient(0deg, transparent 24px, #6c6a6a 25px, #6c6a6a 26px, transparent 27px),
+        linear-gradient(90deg, transparent 24px, #6c6a6a 25px, #6c6a6a 26px, transparent 27px);
+    background-size: 100px 100px;
+    
+}
+
+/* 以下是鼠鼠的样式 */
+#shushu-front, #shushu-side {
+    position: absolute;
+    bottom: 25%;
+    width: 100px;
+    transition: transform 0.5s;
+    z-index: 9;
+}
+
+
+
+

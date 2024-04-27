@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./页面1.css">
+</head>
+<body>
+    <img id="shushu-front" src="./鼠鼠正面.png" alt="鼠鼠正面图">
+    <img id="shushu-side" src="./鼠鼠侧面_rotated.png" alt="鼠鼠侧面图">
+    <img id="newImage" src="./懵.png" style="position: absolute; opacity: 0;width: 100px;">
+    
+    <div class="kitchen">
+        <div class="table">
+        <div class="table-top"></div>
+        </div>
+        <div class="closet-left-1"></div>
+        <div class="closet-left-2"></div>
+        <div class="closet-left-3"></div>
+        <div class="closet-left-4"></div>
+        <div class="closet-left-5">
+            <div class="handle"></div>
+        </div>
+        <div class="closet-right-1"></div>
+        <div class="closet-right-2"></div>
+        <div class="closet-right-3"></div>
+        <div class="closet-right-4"></div>
+        <div class="closet-right-5">
+            <div class="handle"></div>
+        </div>
+        <div class="stove">
+            <div class="stove-biankuang"></div>
+            <div class="stove-center"></div>
+            <div class="stove-button1"></div>
+            <div class="stove-top"></div>
+        </div>
+        <div class="wallpaper"></div>
+        <div class="closet-top-left1"></div>
+        <div class="closet-top-left2"></div>
+        <div class="handle-right"></div>
+        <div class="closet-top-right1"></div>
+        <div class="closet-top-right2"></div>
+        <div class="handle-left1"></div>
+        <div class="closet-top-right3"></div>
+        <div class="closet-top-right4"></div>
+        <div class="handle-left2"></div>
+        <div class="closet-top-right5"></div>
+        <div class="closet-top-right6"></div>
+        <div class="handle-left3"></div>
+        <div class="closet-top-right7"></div>
+        <div class="closet-top-right8"></div>
+        <div class="shelf1"></div>
+        <div class="shelf2"></div>
+        <div class="rangeHood1-1"></div>
+        <div class="rangeHood1-2"></div>
+        <div class="rangeHood2"></div>
+        <div class="rangeHood3"></div>
+        <div class="zaotai"></div>
+
+        
+    </div>
+    <script>
+        var hamsterFront = document.getElementById('shushu-front');
+        var hamsterSide = document.getElementById('shushu-side');
+        var newImage = document.getElementById('newImage');
+            
+        document.addEventListener('keydown', function(e) {
+            // var hamsterFront = document.getElementById('shushu-front'); // 获取正面的hamster元素
+            // var hamsterSide = document.getElementById('shushu-side'); // 获取侧面的hamster元素
+            hamsterFront.style.width = '120px';
+            var speed = 15; // 设置移动速度
+            var left = hamsterFront.offsetLeft; // 获取hamster当前的左边距
+
+            var currentHamster = hamsterFront.style.display === 'block' ? hamsterFront : hamsterSide;
+            var left = currentHamster.offsetLeft; // 获取当前显示的hamster的左边距
+
+            if (e.key === 'ArrowLeft') { // 如果按下的是左箭头键
+                hamsterFront.style.display = 'none'; // 隐藏正面的hamster
+                hamsterSide.style.display = 'block'; // 显示侧面的hamster
+                hamsterSide.style.transform = 'scaleX(1)'; // 应用水平翻转
+                currentHamster.style.left = (left - speed) + 'px'; // hamster向左移动
+            } else if (e.key === 'ArrowRight') { // 如果按下的是右箭头键
+                hamsterFront.style.display = 'none'; // 隐藏正面的hamster
+                hamsterSide.style.display = 'block'; // 显示侧面的hamster
+                hamsterSide.style.transform = 'scaleX(-1)'; // 移除水平翻转
+                currentHamster.style.left = (left + speed) + 'px'; // hamster向右移动
+
+                // 如果鼠鼠的位置超过了窗口的宽度
+                if (currentHamster.offsetLeft > window.innerWidth-15) {
+                 window.location.href = '页面2.html'; // 重定向到页面2
+                }
+            }
+
+            
+        });
+        document.addEventListener('keyup', function(e) {
+            // var hamsterFront = document.getElementById('shushu-front'); // 获取正面的hamster元素
+            // var hamsterSide = document.getElementById('shushu-side'); // 获取侧面的hamster元素
+
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { // 如果释放的是左箭头键或右箭头键
+                hamsterFront.style.left = hamsterSide.style.left; // 将正面的hamster的位置设置为侧面的hamster的位置
+                hamsterFront.style.display = 'block'; // 显示正面的hamster
+                hamsterSide.style.display = 'none'; // 隐藏侧面的hamster
+            }
+        });
+        // 定义显示新图片的函数
+        function showNewImage() {
+            // 设置newImage的位置为当前显示的shushu图片的位置
+            var currentHamster = hamsterFront.style.display === 'block' ? hamsterFront : hamsterSide;
+            newImage.style.left = currentHamster.style.left;
+            newImage.style.bottom = 'calc(' + currentHamster.style.bottom + ' + 90px)'; // shushu图片正上方60px的位置
+
+            newImage.style.opacity = '0.8'; // 淡入
+            setTimeout(function() {
+                newImage.style.opacity = '0'; // 淡出
+            }, 3000); // 3秒后执行淡出指令
+        }
+
+        // 为鼠鼠图片添加点击事件处理函数
+        hamsterSide.addEventListener('click', showNewImage);
+        hamsterFront.addEventListener('click', showNewImage);
+
+        //跳转页面
+        
+
+        function openLadderWindow() {
+            ladderWindow = window.open('ladder.html', 'ladderWindow');
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.source === ladderWindow && event.data === 'ladderPlaced') {
+                // 让鼠鼠通过梯子到达壁橱
+            }
+        });
+
+        
+    </script>
+</body>
+</html>
